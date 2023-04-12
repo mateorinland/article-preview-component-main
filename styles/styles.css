@@ -77,6 +77,11 @@ select {
     scroll-behavior: auto !important;
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  .share-toggletip {
+    transition: none;
+  }
+}
 body {
   font-size: 0.8125rem;
   font-family: "Manrope", sans-serif;
@@ -185,6 +190,7 @@ body {
 
 .share-container.toggle .share-toggletip {
   display: flex;
+  opacity: 1;
 }
 
 .share-container.toggle .share-button {
@@ -216,6 +222,9 @@ body {
 
 .share-toggletip {
   display: none;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 1000ms;
   background-color: hsl(217, 19%, 35%);
   align-items: center;
   position: absolute;
