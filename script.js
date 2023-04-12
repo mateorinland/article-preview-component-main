@@ -4,7 +4,7 @@ const shareContainer = document.querySelector(".share-container");
 shareButton.addEventListener("click", () => {
   shareContainer.classList.toggle("toggle");
   let expandedValue = shareButton.getAttribute("aria-expanded");
-  if(expandedValue == "true") {
+  if (expandedValue == "true") {
     expandedValue = "false";
   } else {
     expandedValue = "true";

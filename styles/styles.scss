@@ -1,0 +1,213 @@
+@import "reset";
+
+$Very_Dark_Grayish_Blue: hsl(217, 19%, 35%);
+$Desaturated_Dark_Blue: hsl(214, 17%, 51%);
+$Grayish_Blue: hsl(212, 23%, 69%);
+$Light_Grayish_Blue: hsl(210, 46%, 95%);
+
+body {
+  font-size: 0.8125rem;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  background-color: $Light_Grayish_Blue;
+  padding: min(4%, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 62.5rem) {
+  body {
+    min-height: 100vh;
+  }
+  main {
+    display: flex;
+  }
+}
+
+.grid-flow {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  position: relative;
+  max-width: 50rem;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .card {
+    overflow: unset;
+  }
+}
+
+.preview-image {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .preview-image {
+    height: 100%;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+}
+
+.article-info {
+  padding: 1rem 2.2rem;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .article-info {
+    padding: 2rem 2.2rem;
+    width: 50rem;
+  }
+}
+
+.preview-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $Very_Dark_Grayish_Blue;
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .preview-title {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+}
+
+.preview-description {
+  color: $Very_Dark_Grayish_Blue;
+}
+
+.author-info {
+  display: flex;
+  gap: 1rem;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.author-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.author-name {
+  font-weight: 700;
+  color: $Very_Dark_Grayish_Blue;
+}
+
+.article-date {
+  color: #6c7785;
+  //Replaced FrontendMentor's provided color for the one suggested by Accessibility Insights for color contrast concerns
+}
+
+.share-container.toggle .share-toggletip {
+  display: flex;
+}
+
+.share-container.toggle .share-button {
+  background-color: $Desaturated_Dark_Blue;
+}
+
+.share-container.toggle .share-button svg path {
+  fill: white;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .share-container {
+    position: relative;
+  }
+}
+
+.share-button {
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $Light_Grayish_Blue;
+  position: relative;
+  z-index: 1;
+}
+
+.share-toggletip {
+  display: none;
+  background-color: $Very_Dark_Grayish_Blue;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  gap: 1rem;
+  padding: 0.8rem 2rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .share-toggletip {
+    border-radius: 1rem;
+    width: 18rem;
+    height: 3.5rem;
+    gap: 0.5rem;
+    bottom: 3rem;
+    right: 0;
+    left: unset;
+    transform: translateX(4rem);
+    z-index: 2;
+  }
+
+  .share-toggletip::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    z-index: 1;
+    bottom: -1rem;
+    right: 4.5rem;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-top: 0.8rem solid hsl(217, 19%, 35%);
+  }
+}
+
+.share-text {
+  text-transform: uppercase;
+  color: $Grayish_Blue;
+  letter-spacing: 0.3rem;
+}
+
+.icons-list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.attribution {
+  font-size: 0.846rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.attribution-link {
+  color: hsl(228, 45%, 44%);
+}
