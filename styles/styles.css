@@ -224,7 +224,7 @@ body {
   display: none;
   opacity: 0;
   will-change: opacity;
-  transition: opacity 1000ms;
+  transition: opacity 400ms;
   background-color: hsl(217, 19%, 35%);
   align-items: center;
   position: absolute;
